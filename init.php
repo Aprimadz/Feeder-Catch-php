@@ -11,7 +11,7 @@ try {
     $feeder = new FeederWS();
 
     $ts = (date('Y') -5) . '1';
-    $glmFilter = "id_periode >= '$ts'";
+    $glmFilter = "id_periode >= '$test'";              
     
     $feeder->logger->info('Starting CSV export', ['filter' => $glmFilter]);
     

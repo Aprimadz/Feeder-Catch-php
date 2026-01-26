@@ -166,7 +166,15 @@ class FeederWS {
     
 
 
-    public function GetListMahasiswa(string $filter = "", int $limit = 10, int $offset = 0): array{
+    public function GetListMahasiswa(string $filter = "", int $limit = 20, int $offset = 0): array{
         return $this->call('GetListMahasiswa',$filter, $limit, $offset);
+    }
+
+    public function GetListDosen(string $filter = "", int $limit = 10, int $offset = 0): array{
+        return $this->call("GetListDosen",$filter, $limit,$offset);
+    }
+
+    public function GetListPenugasanSemuaDosen(string $filter = "", int $limit = 10, int $offset = 0): array{
+        return $this->call("GetListPenugasanSemuaDosen",$filter, $limit, $offset);
     }
 }
